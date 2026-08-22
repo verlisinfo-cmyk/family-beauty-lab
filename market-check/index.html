@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="共同実証の可能性を整理するための、御店専用の5つの事前確認です。">
+  <title>共同実証・市場仮説確認</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">JOINT PROOF CHECK</p>
+      <p class="time-note">回答時間の目安：1〜2分</p>
+      <h1 id="page-title"><span class="hero-number">5</span>つの回答で、<br>御店の市場仮説を整理します</h1>
+      <div class="hero-rule" aria-hidden="true"><span>◆</span></div>
+      <p class="lead">女性のお客様との信頼関係を起点に、ご家族へ自然に広がる可能性があるか。<br>御店の状況に合わせて、一緒に確かめるための事前確認です。</p>
+      <p>これは商品導入のお申込みではありません。御店のお客様層で、共同実証の可能性があるかを整理するための確認です。</p>
+      <p class="no-sales">5つの回答をもとに、御店で確かめられそうな市場仮説を整理します。</p>
+    </section>
+
+    <form id="market-form" novalidate aria-describedby="form-error">
+      <input type="hidden" id="form-loaded-at" name="formLoadedAt">
+      <input type="hidden" id="source" name="source">
+      <input type="hidden" id="salon-identifier" name="salonIdentifier">
+      <input type="hidden" id="campaign" name="campaign">
+      <div class="honeypot" aria-hidden="true"><label for="website">Webサイト</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+      <section class="form-section" aria-labelledby="questions-title">
+        <p class="section-kicker">QUESTIONNAIRE</p>
+        <h2 id="questions-title">５つの質問</h2>
+        <p class="section-note">当てはまるものをお選びください。<span class="required-note">必須</span></p>
+
+        <fieldset class="question-card" data-field="customerAge">
+          <legend><span class="question-number">1</span>主なお客様の年代を教えてください。<b>必須</b></legend>
+          <div class="choices">
+            <label><input type="radio" name="customerAge" value="20〜30代"><span>20〜30代</span></label>
+            <label><input type="radio" name="customerAge" value="40代"><span>40代</span></label>
+            <label><input type="radio" name="customerAge" value="50代"><span>50代</span></label>
+            <label><input type="radio" name="customerAge" value="60代以上"><span>60代以上</span></label>
+            <label><input type="radio" name="customerAge" value="幅広い年代"><span>幅広い年代</span></label>
+          </div>
+          <p class="field-error" id="customerAge-error" role="alert"></p>
+        </fieldset>
+
+        <fieldset class="question-card" data-field="regularCustomers">
+          <legend><span class="question-number">2</span>継続して通われている女性のお客様は、どの程度いらっしゃいますか？<b>必須</b></legend>
+          <div class="choices">
+            <label><input type="radio" name="regularCustomers" value="5名未満"><span>5名未満</span></label>
+            <label><input type="radio" name="regularCustomers" value="5〜10名"><span>5〜10名</span></label>
+            <label><input type="radio" name="regularCustomers" value="11〜30名"><span>11〜30名</span></label>
+            <label><input type="radio" name="regularCustomers" value="31名以上"><span>31名以上</span></label>
+            <label><input type="radio" name="regularCustomers" value="分からない"><span>分からない</span></label>
+          </div>
+          <p class="field-error" id="regularCustomers-error" role="alert"></p>
+        </fieldset>
+
+        <fieldset class="question-card" data-field="familyConsultation">
+          <legend><span class="question-number">3</span>ご家族のホームケアについて相談される頻度を教えてください。<b>必須</b></legend>
+          <div class="choices">
+            <label><input type="radio" name="familyConsultation" value="よくある"><span>よくある</span></label>
+            <label><input type="radio" name="familyConsultation" value="時々ある"><span>時々ある</span></label>
+            <label><input type="radio" name="familyConsultation" value="ほとんどない"><span>ほとんどない</span></label>
+            <label><input type="radio" name="familyConsultation" value="分からない"><span>分からない</span></label>
+          </div>
+          <p class="field-error" id="familyConsultation-error" role="alert"></p>
+        </fieldset>
+
+        <fieldset class="question-card" data-field="homeCareGuidance">
+          <legend><span class="question-number">4</span>ホームケアの案内方針を教えてください。<b>必須</b></legend>
+          <div class="choices">
+            <label><input type="radio" name="homeCareGuidance" value="必要に応じて案内している"><span>必要に応じて案内している</span></label>
+            <label><input type="radio" name="homeCareGuidance" value="希望があれば案内している"><span>希望があれば案内している</span></label>
+            <label><input type="radio" name="homeCareGuidance" value="基本的には案内していない"><span>基本的には案内していない</span></label>
+            <label><input type="radio" name="homeCareGuidance" value="これから検討したい"><span>これから検討したい</span></label>
+          </div>
+          <p class="field-error" id="homeCareGuidance-error" role="alert"></p>
+        </fieldset>
+
+        <fieldset class="question-card" data-field="interests">
+          <legend><span class="question-number">5</span>御店でこの取り組みを試すとしたら、まず何が分かると次の判断をしやすいですか？<b>必須</b></legend>
+          <p class="help-text">今の御店にとって「ここが分かれば、取り組むかどうか・どう進めるかを考えやすい」と思うものをお選びください。ご回答をもとに、御店向けの市場仮説と、無理なく確かめる進め方を整理します。複数選択できます。</p>
+          <div class="choices choices--multi">
+            <label><input type="checkbox" name="interests" value="お客様のご家族が、実際にホームケアを使ってくれそうか"><span>お客様のご家族が、実際にホームケアを使ってくれそうか</span></label>
+            <label><input type="checkbox" name="interests" value="購入を希望する方がどの程度いそうか、どの購入方法を望むか"><span>購入を希望する方がどの程度いそうか、どの購入方法を望むか</span></label>
+            <label><input type="checkbox" name="interests" value="一度の利用で終わらず、続けて使いたいと思われるか"><span>一度の利用で終わらず、続けて使いたいと思われるか</span></label>
+            <label><input type="checkbox" name="interests" value="サロンで無理なく説明・案内できるか"><span>サロンで無理なく説明・案内できるか</span></label>
+            <label><input type="checkbox" name="interests" value="仕入れや在庫を持つ負担が、御店にとって見合うか"><span>仕入れや在庫を持つ負担が、御店にとって見合うか</span></label>
+            <label><input id="interest-other-toggle" type="checkbox" name="interests" value="その他"><span>その他</span></label>
+          </div>
+          <div id="other-interest-wrap" class="conditional-field" hidden>
+            <label for="otherInterest">その他の内容</label>
+            <textarea id="otherInterest" name="otherInterest" rows="4" maxlength="300" placeholder="その他、確認したいことをご記入ください。"></textarea>
+            <p class="field-error" id="otherInterest-error" role="alert"></p>
+          </div>
+          <p class="field-error" id="interests-error" role="alert"></p>
+        </fieldset>
+        <p class="privacy-reminder">※御店のお客様個人を特定できる氏名・電話番号・メールアドレス等は入力しないでください。</p>
+      </section>
+
+      <section class="form-section" aria-labelledby="contact-title">
+        <p class="section-kicker">CONTACT</p>
+        <h2 id="contact-title">ご連絡先</h2>
+        <p class="section-note">市場仮説の整理と、垂水からの15分程度の確認・相談のご案内に使用します。</p>
+        <div class="input-grid">
+          <div class="input-field" data-field="salonName"><label for="salonName">サロン名 <b>必須</b></label><input id="salonName" name="salonName" type="text" maxlength="100" autocomplete="organization"><p class="field-error" id="salonName-error" role="alert"></p></div>
+          <div class="input-field" data-field="name"><label for="name">お名前 <b>必須</b></label><input id="name" name="name" type="text" maxlength="60" autocomplete="name"><p class="field-error" id="name-error" role="alert"></p></div>
+          <div class="input-field" data-field="email"><label for="email">メールアドレス <b>必須</b></label><input id="email" name="email" type="email" inputmode="email" maxlength="254" autocomplete="email"><p class="field-error" id="email-error" role="alert"></p></div>
+          <div class="input-field" data-field="emailConfirmation"><label for="emailConfirmation">メールアドレス（確認） <b>必須</b></label><input id="emailConfirmation" name="emailConfirmation" type="email" inputmode="email" maxlength="254" autocomplete="email"><p class="field-error" id="emailConfirmation-error" role="alert"></p></div>
+          <div class="input-field" data-field="phone"><label for="phone">電話番号 <b>必須</b></label><input id="phone" name="phone" type="tel" inputmode="tel" maxlength="30" autocomplete="tel" placeholder="例：080-1234-5678"><p class="field-error" id="phone-error" role="alert"></p></div>
+          <fieldset class="input-field contact-time" data-field="contactTime"><legend>連絡しやすい時間帯 <b>必須</b></legend><div class="select-wrap"><select id="contactTime" name="contactTime"><option value="">選択してください</option><option>9:00〜12:00</option><option>12:00〜15:00</option><option>15:00〜18:00</option><option>18:00以降</option><option>特に指定なし</option></select></div><p class="field-error" id="contactTime-error" role="alert"></p></fieldset>
+          <div class="input-field input-field--wide" data-field="message"><label for="message">その他・メッセージ <span>任意</span></label><textarea id="message" name="message" rows="5" maxlength="1000" placeholder="ご質問や補足事項がございましたらご記入ください。"></textarea><p class="field-error" id="message-error" role="alert"></p></div>
+        </div>
+      </section>
+
+      <section class="phone-note" aria-labelledby="phone-note-title">
+        <p class="section-kicker">NEXT STEP</p>
+        <h2 id="phone-note-title">ご回答後の流れ</h2>
+        <p>ご回答をもとに、御店で確かめられそうな市場仮説を整理します。</p>
+        <p>その後、垂水より15分程度の確認・相談をご案内します。</p>
+        <p>商品購入や導入契約をお願いするためのご連絡ではありません。御店の状況に合わせた、共同実証の可能性を一緒に見立てるための確認です。</p>
+      </section>
+
+      <section class="consent-box" data-field="privacyConsent">
+        <p>ご入力いただいた情報は、御店専用の市場仮説の作成、ご回答内容の確認、15分レビューのご案内、本企画に関するご連絡のために利用します。</p>
+        <p>ご本人の同意なく、法令に基づく場合を除き第三者へ提供することはありません。</p>
+        <label class="consent"><input id="privacyConsent" name="privacyConsent" type="checkbox"><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>および入力情報の利用目的を確認し、同意します。<b>必須</b></span></label>
+        <p class="field-error" id="privacyConsent-error" role="alert"></p>
+        <button id="submit-button" class="submit-button" type="submit"><span class="button-label"><span class="button-number">5</span>つの回答を送る</span></button>
+        <p id="submit-status" class="submit-status" aria-live="polite"></p>
+        <p id="form-error" class="field-error form-error" role="alert"></p>
+      </section>
+    </form>
+
+    <section id="completion" class="completion" hidden tabindex="-1" aria-labelledby="completion-title">
+      <p class="eyebrow">THANK YOU</p>
+      <h2 id="completion-title">ご回答ありがとうございました。</h2>
+      <p>ご回答をもとに、御店で確かめられそうな市場仮説を整理させていただきます。</p>
+      <p>その後、垂水より15分程度の確認・相談をご案内いたします。</p>
+      <p>商品購入や導入契約をお願いするものではありませんので、どうぞご安心ください。</p>
+      <p class="small-note">※これは共同実証の可能性を整理するための事前確認です。</p>
+      <a class="back-link" href="../">企画ページへ戻る <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <noscript><p class="noscript">このフォームの送信にはJavaScriptを有効にしてください。</p></noscript>
+  <script src="scripts.js"></script>
+</body>
+</html>
