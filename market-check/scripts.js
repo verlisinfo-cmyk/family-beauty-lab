@@ -26,11 +26,18 @@
     setSending(true);
     fetch(ENDPOINT, {
       method: 'POST',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
       body: new URLSearchParams({ payload: JSON.stringify(payload) })
     })
-      .then(() => showCompletion())
+      .then(response => {
+        if (!response.ok) throw new Error('Submission failed');
+        return response.json();
+      })
+      .then(response => {
+        if (response && response.success) return showCompletion();
+        setSending(false);
+        showErrors((response && response.fieldErrors) || { form: (response && response.message) || '送信中に問題が発生しました。恐れ入りますが、少し時間をおいて再度お試しください。' });
+      })
       .catch(() => {
         setSending(false);
         showErrors({ form: '送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。' });
